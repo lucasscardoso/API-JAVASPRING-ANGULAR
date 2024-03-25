@@ -1,0 +1,84 @@
+<div class="container mt-5">
+  <p>Produtos Cadastrados</p>
+</div>
+
+<table class="table mt-5 bordaTabela"  >
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Codigo De Barras</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produto of dadosRecebidos">
+        <th scope="row">{{produto.id}}</th>
+        <td>{{produto.codigoBarras}}</td>
+        <td>{{produto.nome}}</td>
+        <td>{{produto.preco}}</td>
+        <td class="text-center">
+          <a class="btn btn-primary" >
+            <i class="bi bi-pencil-square" type="button"   [routerLink]="['/produtos/editar/',produto.id + '']" ></i>
+          </a>
+          <!--Excluir-->
+          <a class="btn btn-danger ms-1 " >
+            <i class="bi bi-trash-fill" (click)="excluircomp(produto.id)"></i>
+          </a>
+          </td>
+      </tr>
+     
+    </tbody>
+  </table>
+  
+<div class="container">
+  <div class="row"> 
+    <div class="col"> <button class="btn btn-secondary" (click)="home()"> Voltar</button> </div>
+</div>
+</div>
+  
+
+ 
+
+ <!---MODAL/*<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel" >Atualizar/Alterar Produto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <form [formGroup]=" produtosForm" >
+          <div class="mb-3 my-3">
+              
+          
+              <div class="input-group">
+                
+                  <span class="input-group-text">Codigo De Barras</span>
+                  <input type="text" class="form-control" id="codigoBarras" formControlName="codigoBarras"  placeholder="Digite o codigo de barras">
+              </div>
+          </div>
+          <div class="mb-3">
+               <div class="input-group">
+                   <span class="input-group-text">Nome</span>
+                   <input type="text" class="form-control" id="nome" formControlName="nome" placeholder="Digite o nome do produto">
+             </div>
+            </div>
+            <div class="mb-3">
+              <div class="input-group">
+                  <span class="input-group-text"> Preço</span>
+              <input type="number" class="form-control" id="preco" formControlName="preco" placeholder="Digite o valor do produto">
+              </div>
+            </div>
+          </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="altera()" >Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>*/-->
+ 

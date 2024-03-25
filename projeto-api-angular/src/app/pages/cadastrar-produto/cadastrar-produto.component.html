@@ -1,0 +1,69 @@
+<div class="container mt-5">
+        <p>Digite as informações do produto que deseja cadastrar </p> 
+</div>
+
+
+
+<form [formGroup]="produtosForm" (ngSubmit)="enviar()">
+    <div  class=" mb-3 mt-5">
+        
+
+        <div class=" input-group">
+            <span class="input-group-text">Codigo De Barras</span>
+            <input type="text" class="form-control" id="codigoBarras" formControlName="codigoBarras"  placeholder="Digite o codigo de barras">
+           
+            <div class="container">
+              <div class="row">
+                <div  *ngIf="produtosForm.get('codigoBarras')?.errors?.['required'] && produtosForm.get('codigoBarras')?.touched " class="text-danger">
+                  Codigo de Barras é Obrigatorio
+              </div>
+              </div>
+            </div>
+           
+        </div>
+
+    </div>
+
+    <div class="mb-3">
+         <div class="input-group">
+             <span class="input-group-text">Nome</span>
+             <input type="text" class="form-control" id="nome" formControlName="nome" placeholder="Digite o nome do produto">
+            
+            <div class="container">
+              <div class="row">
+                <div  *ngIf="produtosForm.get('nome')?.errors?.['required'] && produtosForm.get('nome')?.touched " class="text-danger">
+                  Nome é Obrigatorio
+              </div>
+              </div>
+            </div>
+
+
+       </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+            <span class="input-group-text"> Preço</span>
+        <input type="number" class="form-control" id="preco" formControlName="preco" placeholder="Digite o valor do produto">
+
+       <div class="container">
+              <div class="row">
+                <div  *ngIf="produtosForm.get('preco')?.errors?.['required'] && produtosForm.get('preco')?.touched " class="text-danger">
+                  O preço é Obrigatorio
+              </div>
+              </div>
+            </div>
+
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="col mr-3 p-3">
+          <button type="submit" class="btn btn-secondary m-3 " [disabled]="produtosForm.invalid" >Cadastrar</button>
+          <button type="submit" class="btn btn-secondary " (click)="home()">Voltar</button>
+        </div>
+      </div>
+    
+  </form>
+  

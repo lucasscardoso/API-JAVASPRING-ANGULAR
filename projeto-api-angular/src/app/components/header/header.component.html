@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/"  >Gerenciador De Produtos <mat-icon>autorenew</mat-icon> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fontes-menu" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true} " >Home <mat-icon>home</mat-icon> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fontes-menu" routerLink="produtos" routerLinkActive="active" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Produtos <mat-icon>receipt</mat-icon> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fontes-menu" routerLink="produtos/cadastrar" routerLinkActive="active" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Cadastro <mat-icon >assignment</mat-icon>  </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,32 @@
+<div class="my-3">
+    <h1> Editar Produto </h1>
+</div>
+
+
+<form [formGroup]="produtosForm" (submit)="alterar()">
+    <div class="mb-3 my-3">
+        
+       
+
+        <div class="input-group">
+            <span class="input-group-text">Codigo De Barras</span>
+            <input type="text" class="form-control" id="codigoBarras" formControlName="codigoBarras"  placeholder="Digite o codigo de barras">
+        </div>
+    </div>
+    <div class="mb-3">
+         <div class="input-group">
+             <span class="input-group-text">Nome</span>
+             <input type="text" class="form-control" id="nome" formControlName="nome" placeholder="Digite o nome do produto">
+       </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+            <span class="input-group-text"> Preço</span>
+        <input type="number" class="form-control" id="preco" formControlName="preco" placeholder="Digite o valor do produto">
+        </div>
+      </div>
+
+    <button type="submit" class="btn btn-secondary" >Atualizar</button>
+  </form>
+  
+
